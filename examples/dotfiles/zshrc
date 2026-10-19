@@ -1,0 +1,3 @@
+# Shared shell setup
+export EDITOR=vim
+alias ll="ls -lah"

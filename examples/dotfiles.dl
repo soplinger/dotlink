@@ -1,0 +1,13 @@
+# dotlink manifest for the example dotfiles
+# Sources are relative to this manifest's folder.
+#
+# link SRC -> DST   symlink DST to SRC
+# copy SRC -> DST   copy SRC to DST (remembers its checksum)
+# host NAME         following lines apply only on machine NAME; 'host' alone resets
+
+link  dotfiles/vimrc        -> $DEST/.vimrc
+copy  dotfiles/gitconfig    -> $DEST/.gitconfig
+link  dotfiles/zshrc        -> $DEST/.zshrc
+
+host laptop
+link  dotfiles/zshrc.laptop -> $DEST/.zshrc.local
